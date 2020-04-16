@@ -1,6 +1,6 @@
-import homeRoute from "./routes/index";
 
 const app = () => {
+  import homeRoute from "./routes/index";
 
   const express = require("express");
   const logger = require("morgan");
