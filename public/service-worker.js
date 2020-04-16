@@ -66,7 +66,7 @@ self.addEventListener("fetch", function(e) {
 
     e.respondWith(
         caches.match(e.request).then(function(res) {
-            return response || fetch(e.request);
+            return res || fetch(e.request);
         })
     );
 });
