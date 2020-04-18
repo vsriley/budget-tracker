@@ -80,5 +80,5 @@ self.addEventListener("fetch", function(e) {
     //     caches.match(e.request).then(function(res) {
     //         return res || fetch(e.request);
     //     })
-    );
+    // );
 });
