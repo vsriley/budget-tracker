@@ -15,7 +15,7 @@
   
   app.use(express.static("public"));
   
-  // mongoose setup 
+  // mongoose setup here
   mongoose.connect("mongodb://localhost/budget",{
     useNewUrlParser: true,
     useFindAndModify: false
