@@ -33,11 +33,11 @@
     useNewUrlParser: true,
     useFindAndModify: false
   }); 
-  mongoose.Promise = global.Promise;
+  // mongoose.Promise = global.Promise;
   
   // // routes
   // homeRoute(app);
-  
+  app.use(require("./routes/api.js"));
   // // set up a wildcard route to catch related endpoints and outputs a response.
   // app.get('*', (req, res) => {
   //   res.status(400).json({
