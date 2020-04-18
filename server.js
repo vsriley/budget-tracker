@@ -37,15 +37,6 @@
   
   // // routes
   // homeRoute(app);
-  app.use(require("./routes/api.js"));
-  app.get('/', (req, res) => {
-    res.redirect('/api');
-  });
-  app.get('/api', (req, res) => {
-    res.status(200).json({
-      message: 'Welcome to Project Support',
-    });
-  });
   
   // // set up a wildcard route to catch related endpoints and outputs a response.
   // app.get('*', (req, res) => {
