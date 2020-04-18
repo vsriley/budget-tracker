@@ -63,12 +63,12 @@ self.addEventListener("fetch", function(e) {
 
         return;
     }
-    event.respondWith(
-        fetch(event.request).catch(function() {
-          return caches.match(event.request).then(function(response) {
+    e.respondWith(
+        fetch(e.request).catch(function() {
+          return caches.match(e.request).then(function(response) {
             if (response) {
               return response;
-            } else if (event.request.headers.get("accept").includes("text/html")) {
+            } else if (e.request.headers.get("accept").includes("text/html")) {
               // return the cached home page for all requests for html pages
               return caches.match("/");
             }
@@ -76,9 +76,9 @@ self.addEventListener("fetch", function(e) {
         })
       );
 
-    e.respondWith(
-        caches.match(e.request).then(function(res) {
-            return res || fetch(e.request);
-        })
+    // e.respondWith(
+    //     caches.match(e.request).then(function(res) {
+    //         return res || fetch(e.request);
+    //     })
     );
 });
